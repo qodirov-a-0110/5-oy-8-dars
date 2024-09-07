@@ -1,20 +1,21 @@
-const display = document.getElementById("display")
+const display = document.getElementById('display');
 
-function appendTooDisplay(input) {
-    display.value += input;
+function appendToDisplay(input){
+display.value += input;
+
 }
 
+function clearDisplay(){
+    display.value = '';
 
-function clearDisplay() {
-    display.value = ""
+
 }
+function kakulyator(){
+try {
+    display.value = eval (display.value)
 
-
-function calculate() {
-    try{
-        display.value = eval(display.value)
-    }
-    catch(error){
-        display.value = "Error"
-    }
+} catch (error) {
+    display.value = 'error'
+    
+}
 }
